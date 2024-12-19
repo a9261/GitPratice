@@ -23,6 +23,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Run a one-line script
-        uses: a9261/JajaTestAction@latest
+        uses: a9261/JajaTestAction@master 
         with:
           who-togreet: 'i am jaja'
