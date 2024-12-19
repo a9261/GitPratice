@@ -1,28 +1,28 @@
 name: CI
-'on':
+
+on:
   push:
-    branches:
-      master
+    branches: ['master']
   pull_request:
-    branches:
-      master
-  workflow_dispatch: null
+    branches: ['master']
+  workflow_dispatch:
+
 jobs:
   first_job:
     runs-on: ubuntu-latest
     steps:
-        uses: actions/checkout@v4
-        name: Run a one-line script
-          run: 'echo Hello, world!'
-        name: Run a multi-line script
-          run: |
-            echo Add other actions to build,
-            echo test, and deploy your project.
+      - uses: actions/checkout@v4
+      - name: Run a one-line script
+        run: echo Hello, world!
+      - name: Run a multi-line script
+        run: |
+          echo Add other actions to build,
+          echo test, and deploy your project.
+
   second_job:
     runs-on: ubuntu-latest
     steps:
+      - name: Run a one-line script
         uses: a9261/JajaTestAction@v1.0.1
-        name: Run a one-line script
-          with:
-            who-togreet: 'i am jaja'
-          
+        with:
+          who-togreet: 'i am jaja'
